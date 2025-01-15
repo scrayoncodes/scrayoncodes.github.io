@@ -581,10 +581,3 @@ footer {
 footer p {
   margin: 0;
 }
-
-.order__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensure flexible grid */
-    gap: 20px; /* Space between cards */
-    justify-content: center; /* Center the grid */
-}
