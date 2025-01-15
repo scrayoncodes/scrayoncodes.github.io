@@ -582,24 +582,3 @@ footer p {
   margin: 0;
 }
 
-.order__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column size dynamically */
-    gap: 20px;
-    justify-content: center; /* Center-align items */
-}
-
-.placeholder-card {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    pointer-events: none;
-}
-
-.order__card img {
-    display: block;
-    width: 100%; /* Ensures images scale properly */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Optional: Adjusts how the image fills its container */
-}
-
