@@ -588,3 +588,11 @@ footer p {
     box-shadow: none;
     pointer-events: none;
 }
+
+.order__card img {
+    display: block;
+    width: 100%; /* Ensures images scale properly */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Optional: Adjusts how the image fills its container */
+}
+
