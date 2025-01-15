@@ -582,6 +582,13 @@ footer p {
   margin: 0;
 }
 
+.order__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column size dynamically */
+    gap: 20px;
+    justify-content: center; /* Center-align items */
+}
+
 .placeholder-card {
     background: transparent;
     border: none;
