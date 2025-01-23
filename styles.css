@@ -581,3 +581,23 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* Add a green background to the navigation */
+nav {
+    background-color: green;
+}
+
+/* Style the links inside the navigation */
+nav a {
+    color: white;  /* Set text color to white for better contrast */
+    padding: 10px 15px;  /* Add some padding around the links */
+    text-decoration: none;  /* Remove underline from links */
+    display: inline-block;  /* Make the links appear inline with some spacing */
+}
+
+/* Add hover effect to the links */
+nav a:hover {
+    background-color: darkgreen;  /* Darken the background when hovering */
+    color: lightgreen;  /* Lighten the text color on hover */
+}
+
