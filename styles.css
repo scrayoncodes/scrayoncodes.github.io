@@ -101,9 +101,18 @@ nav {
 }
 
 .nav__logo-dark {
-  display: none;
+    display: inline-block;
+    vertical-align: middle; /* Aligns logo vertically with the navigation links */
+    margin-right: 10px; /* Adds spacing between the logo and the navigation links */
 }
 
+/*.nav__logo-dark {
+  display: none;
+}
+.nav__logo-dark {
+  display: flex;
+}
+*/
 .nav__menu__btn {
   font-size: 1.5rem;
   color: var(--white);
@@ -434,10 +443,10 @@ nav {
     max-width: 250px;
   }
 
-  .nav__logo-dark {
+  /*.nav__logo-dark {
     display: flex;
   }
-
+*/
   .nav__logo-white {
     display: none;
   }
