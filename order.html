@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Order Online - Plant Plate Grill</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="index.html">
+                        <img src="images/Plant.pdf.png" alt="Plant Plate Grill Logo" class="nav__logo-dark" width="50" height="50" />
+                    </a>
+                    <h1 class="logo-title">Plant Plate Grill</h1>
+                </div>
+            </div>
+            <ul class="nav__links compact">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="order-page">
+        <div class="order-container">
+            <h2>Place Your Order</h2>
+            <div class="order-grid">
+                <div class="menu-section">
+                    <h3>Menu Items</h3>
+                    <div class="menu-categories">
+                        <button class="category-btn active" data-category="starters">Starters</button>
+                        <button class="category-btn" data-category="salads">Salads</button>
+                        <button class="category-btn" data-category="mains">Mains</button>
+                        <button class="category-btn" data-category="desserts">Desserts</button>
+                        <button class="category-btn" data-category="beverages">Beverages</button>
+                    </div>
+                    <div class="menu-items" id="menuItems">
+                        <!-- Menu items will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="order-summary">
+                    <h3>Your Order</h3>
+                    <div id="orderList" class="order-list">
+                        <!-- Order items will be populated by JavaScript -->
+                    </div>
+                    <div class="order-total">
+                        <div class="subtotal">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="tax">
+                            <span>Tax (8%):</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="total">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                    </div>
+                    <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Plant Plate Grill. All rights reserved.</p>
+    </footer>
+
+    <script src="order.js"></script>
+</body>
+</html> 
