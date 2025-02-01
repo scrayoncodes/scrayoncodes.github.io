@@ -102,14 +102,19 @@ function updateOrderSummary() {
     
     let subtotal = 0;
     
-    currentOrder.forEach(item => {
+    currentOrder.forEach((item, index) => {
         const itemTotal = item.price * item.quantity;
         subtotal += itemTotal;
         
         const div = document.createElement('div');
         div.className = 'order-item';
         div.innerHTML = `
-            <span>${item.quantity}x ${item.name}</span>
+            <div class="order-item-details">
+                <span>${item.quantity}x ${item.name}</span>
+                <button class="remove-item" onclick="removeFromOrder(${index})">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
             <span>$${itemTotal.toFixed(2)}</span>
         `;
         orderList.appendChild(div);
@@ -123,11 +128,29 @@ function updateOrderSummary() {
     document.getElementById('total').textContent = `$${total.toFixed(2)}`;
 }
 
+function removeFromOrder(index) {
+    currentOrder.splice(index, 1);
+    updateOrderSummary();
+}
+
+// Update the checkout button event listener
 document.getElementById('checkoutBtn').addEventListener('click', () => {
     if (currentOrder.length === 0) {
         alert('Please add items to your order first.');
         return;
     }
-    // Add checkout functionality here
-    alert('Proceeding to checkout...');
+    // Store the order and redirect
+    localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+    // Only redirect if checkout.html exists
+    fetch('checkout.html')
+        .then(response => {
+            if (response.ok) {
+                window.location.href = 'checkout.html';
+            } else {
+                alert('Checkout page is under construction. Please try again later.');
+            }
+        })
+        .catch(() => {
+            alert('Checkout page is under construction. Please try again later.');
+        });
 }); 
