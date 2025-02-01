@@ -139,18 +139,10 @@ document.getElementById('checkoutBtn').addEventListener('click', () => {
         alert('Please add items to your order first.');
         return;
     }
-    // Store the order and redirect
+    
+    // Store the order
     localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
-    // Only redirect if checkout.html exists
-    fetch('checkout.html')
-        .then(response => {
-            if (response.ok) {
-                window.location.href = 'checkout.html';
-            } else {
-                alert('Checkout page is under construction. Please try again later.');
-            }
-        })
-        .catch(() => {
-            alert('Checkout page is under construction. Please try again later.');
-        });
+    
+    // Redirect to checkout page
+    window.location.href = new URL('checkout.html', window.location.href).href;
 }); 
