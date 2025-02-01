@@ -71,4 +71,3 @@ function handleCheckoutSubmit(event) {
 document.addEventListener('DOMContentLoaded', () => {
     displayCheckoutSummary();
 });
-
