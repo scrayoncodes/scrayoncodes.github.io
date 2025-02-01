@@ -71,6 +71,9 @@ body {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 5l-2 4-4 2 4 2 2 4 2-4 4-2-4-2z' fill='%23FF8C00' fill-opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 .header {
@@ -432,8 +435,15 @@ body {
 .footer__bar {
   padding: 1rem;
   font-size: 0.9rem;
-  color: var(--white);
+  color: #09781e;
   text-align: center;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+  font-weight: bold;
 }
 
 @media (width > 540px) {
@@ -624,16 +634,16 @@ nav {
 
 /* Style the links inside the navigation */
 nav a {
-    color: white;  /* Set text color to white for better contrast */
-    padding: 10px 15px;  /* Add some padding around the links */
-    text-decoration: none;  /* Remove underline from links */
-    display: inline-block;  /* Make the links appear inline with some spacing */
+    color: white;  /* Changed from var(--primary-color) to white */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 /* Add hover effect to the links */
 nav a:hover {
-    background-color: darkgreen;  /* Darken the background when hovering */
-    color: lightgreen;  /* Lighten the text color on hover */
+    background-color: rgba(255, 255, 255, 0.1);  /* Changed hover effect */
+    color: var(--secondary-color);  /* Changed hover color to secondary color */
 }
 
 /* Header and Navigation Styles */
@@ -699,7 +709,7 @@ h2 {
 
 /* Footer Styles */
 footer {
-    background-color: #f5f5f5;
+    background-color: #09781e;
     padding: 1.5rem 0;
     text-align: center;
     margin-top: 3rem;
@@ -729,11 +739,11 @@ li {
 }
 
 .home-header .nav-links a {
-    color: #2c5e1e;
+    color: white;  /* Changed from #2c5e1e to white */
 }
 
 .home-header .nav-links a:hover {
-    background-color: rgba(44, 94, 30, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Navigation styling */
@@ -865,8 +875,28 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 8px;
+}
+
+.order-item-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-item:hover {
+    color: #ff0000;
 }
 
 .order-total {
@@ -898,5 +928,102 @@ li {
     
     .order-summary {
         position: static;
+    }
+}
+
+/* Checkout Page Styles */
+.checkout-page {
+    padding: 2rem;
+}
+
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.checkout-summary {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.checkout-order-list {
+    margin: 1rem 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.checkout-totals {
+    margin-top: 1rem;
+}
+
+.checkout-totals > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.checkout-totals .total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-top: 2px solid #eee;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.checkout-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-order-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2c5e1e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-order-btn:hover {
+    background-color: #234918;
+}
+
+@media (max-width: 768px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
     }
 }
