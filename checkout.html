@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Checkout - Plant Plate Grill</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="index.html">
+                        <img src="images/Plant.pdf.png" alt="Plant Plate Grill Logo" class="nav__logo-dark" width="50" height="50" />
+                    </a>
+                    <h1 class="logo-title">Plant Plate Grill</h1>
+                </div>
+            </div>
+            <ul class="nav__links compact">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-page">
+        <div class="checkout-container">
+            <h2>Checkout</h2>
+            
+            <div class="checkout-grid">
+                <!-- Order Summary Section -->
+                <div class="checkout-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkoutOrderList" class="checkout-order-list">
+                        <!-- Order items will be populated by JavaScript -->
+                    </div>
+                    <div class="checkout-totals">
+                        <div class="subtotal">
+                            <span>Subtotal:</span>
+                            <span id="checkoutSubtotal">$0.00</span>
+                        </div>
+                        <div class="tax">
+                            <span>Tax (8%):</span>
+                            <span id="checkoutTax">$0.00</span>
+                        </div>
+                        <div class="total">
+                            <span>Total:</span>
+                            <span id="checkoutTotal">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Information Form -->
+                <div class="checkout-form">
+                    <h3>Customer Information</h3>
+                    <form id="checkoutForm" onsubmit="handleCheckoutSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Pickup Time</label>
+                            <select id="pickupTime" required>
+                                <option value="">Select a pickup time</option>
+                                <option value="15">15 minutes</option>
+                                <option value="30">30 minutes</option>
+                                <option value="45">45 minutes</option>
+                                <option value="60">1 hour</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Special Instructions</label>
+                            <textarea id="notes" rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-order-btn">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Plant Plate Grill. All rights reserved.</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html> 
