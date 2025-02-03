@@ -1036,3 +1036,22 @@ li {
     margin: 2rem auto;
     max-width: 800px;
 }
+
+.go-back-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.go-back-btn:hover {
+    background-color: #555;
+}
