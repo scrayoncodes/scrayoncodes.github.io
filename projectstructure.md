@@ -1,105 +1,100 @@
 # Plant Plate Grill - Project Structure
 
 ## Overview
-Plant Plate Grill is a modern restaurant website featuring online ordering capabilities, menu browsing, and customer information management.
+
+Plant Plate Grill is a restaurant website where people can check out the menu, order food online, and find info about the restaurant.
 
 ## File Structure
-plant-plate-grill/
-├── index.html # Home page with main navigation and featured content
-├── about.html # About page with restaurant information
-├── menu.html # Full menu display
-├── order.html # Online ordering system
-├── checkout.html # Order checkout and payment processing
-├── privacy.html # Privacy policy
-├── terms.html # Terms of service
-├── styles.css # Main stylesheet
-├── script.js # Main JavaScript file
-└── assets/ # Media and resource files
-├── images/ # Website images
-├── menu/ # Menu item images
-└── sides/ # Side dish images
-### Navigation
-checks
-This documentation provides a comprehensive overview of the project structure, making it easier for developers to understand the website's architecture and maintain the codebase. It can be updated as new features are added or modified.
 
+Here's how everything is organized:plant-plate-grill/
+├── index.html      # Home page with main links and featured content
+├── about.html      # Info about the restaurant
+├── menu.html       # Full menu with food options
+├── order.html      # Online ordering system
+├── checkout.html   # Final checkout page for orders
+├── privacy.html    # Privacy policy (because legal stuff)
+├── terms.html      # Terms of service
+├── styles.css      # Main styling file
+├── script.js       # Main JavaScript file
+├── images/    # General website images
 
-## Key Features
+## Features
 
 ### Navigation
-- Responsive navigation menu
-- Easy access to all main sections
-- Mobile-friendly design
+
+* Simple menu for getting around the site
+* Works well on phones and computers
+* Easy access to all pages
 
 ### Menu System
-- Categorized food items
-- Detailed item descriptions
-- Price display
-- Image gallery for menu items
-- Side dishes section
+
+* Food items sorted into categories
+* Descriptions and prices for each item
+* Picture gallery of menu items
+* Separate section for sides
 
 ### Ordering System
-- Add to cart functionality
-- Order customization options
-- Real-time cart updates
-- Order summary display
-- Quantity adjustment
-- Item removal capability
+
+* Add items to cart
+* Customize orders
+* See cart updates in real time
+* Change quantity or remove items
+* Order summary before checkout
 
 ### Checkout Process
-- Customer information collection
-- Order review
-- Order confirmation system
-- Back to menu option
-- Form validation
+
+* Enter customer details
+* Review order before confirming
+* Go back to menu if needed
+* Makes sure all required info is filled in
 
 ### Design Elements
-- Consistent brand colors
-- Responsive layout
-- White content boxes for readability
-- Interactive elements (buttons, hover effects)
-- Modern typography
 
-### Legal Documentation
-- Privacy Policy
-- Terms of Service
-- Copyright information
+* Uses the same colors throughout
+* Looks good on different screen sizes
+* Clean, easy-to-read layout
+* Buttons and hover effects for interaction
+* Modern and simple fonts
 
-## Technical Implementation
+### Legal Stuff
 
-### CSS Features
-- Flexbox and Grid layouts
-- Responsive design breakpoints
-- Hover animations
-- Form styling
-- Modal windows
+* Privacy Policy
+* Terms of Service
+* Copyright info
 
-### JavaScript Functionality
-- Shopping cart management
-- Order total calculation
-- Form validation
-- Local storage for order data
-- Dynamic content updates
+## How It Works (Tech Stuff)
+
+### CSS
+
+* Uses Flexbox and Grid for layout
+* Adjusts design for different screen sizes
+* Cool hover effects
+* Styled forms and buttons
+* Popup windows (modals)
+
+### JavaScript
+
+* Manages shopping cart
+* Calculates total price
+* Checks if forms are filled correctly
+* Saves order info temporarily
+* Updates content dynamically
 
 ### User Experience
-- Clear navigation paths
-- Intuitive ordering process
-- Responsive feedback
-- Error handling
-- Loading states
 
-## Future Enhancements
-- User accounts system
-- Order history
-- Loyalty program
-- Online payment integration
-- Email confirmation system
-- Newsletter subscription
-- Social media integration
-- Customer reviews section
+* Simple and clear navigation
+* Easy-to-use ordering process
+* Shows helpful messages and feedback
+* Handles errors smoothly
+* Loading indicators where needed
 
-## Maintenance
-- Regular content updates
-- Image optimization
-- Performance monitoring
-- Browser compatibility testing
-- Mobile responsiveness checks
+## Future Updates (Ideas for Later)
+
+* User accounts to save orders
+* Order history feature
+* Loyalty rewards program
+* Online payment options
+* Email confirmations for orders
+* Newsletter sign-ups
+* Links to social media
+* Customer reviews and ratings
